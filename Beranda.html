@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #e30613;
+    --red-dark: #b8000c;
+    --orange: #f7941d;
+    --ink: #1a1a1a;
+    --muted: #555;
+    --card: #fff;
+    --bg1: #fff;
+    --bg2: #f6f3f1;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+  }
+
+  body {
+    font-family: 'Poppins', system-ui, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(120deg, var(--bg1), var(--bg2));
+    min-height: 100vh
+  }
+
+  .hero {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 32px;
+    align-items: start
+  }
+
+  .badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #f7941d, #ff6a00);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px
+  }
+
+  h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.25;
+    font-weight: 800;
+    margin-bottom: 18px
+  }
+
+  h1 span {
+    color: var(--red)
+  }
+
+  .desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 480px;
+    margin-bottom: 28px
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px
+  }
+
+  .feature {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 18px 10px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .06)
+  }
+
+  .feature svg {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 10px;
+    stroke: var(--red);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round
+  }
+
+  .cta {
+    display: flex;
+    align-items: stretch;
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    max-width: 560px;
+    box-shadow: 0 8px 22px rgba(227, 6, 19, .3);
+    transition: transform .15s
+  }
+
+  .cta:hover {
+    transform: translateY(-2px)
+  }
+
+  .cta:focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 3px
+  }
+
+  .cta-main {
+    flex: 1;
+    background: linear-gradient(90deg, var(--red-dark), var(--red));
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px
+  }
+
+  .cta-main svg {
+    width: 40px;
+    height: 40px;
+    flex: none
+  }
+
+  .cta-main strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 600
+  }
+
+  .cta-main small {
+    font-size: 12px;
+    opacity: .92
+  }
+
+  .cta-arrow {
+    width: 64px;
+    background: linear-gradient(180deg, #ffb300, var(--orange));
+    display: grid;
+    place-items: center
+  }
+
+  .cta-arrow svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--ink);
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round
+  }
+
+  /* Visual kanan */
+  .visual {
+    position: relative;
+    min-height: 440px
+  }
+
+  .ac {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 78%;
+    max-width: 440px
+  }
+
+  .ac-body {
+    background: linear-gradient(#fff, #f0f0f0);
+    border-radius: 14px 14px 22px 22px;
+    height: 90px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .14);
+    position: relative
+  }
+
+  .ac-body::after {
+    content: "";
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    bottom: 10px;
+    height: 10px;
+    background: #222;
+    border-radius: 0 0 12px 12px
+  }
+
+  .ac-body i {
+    position: absolute;
+    right: 12%;
+    top: 30px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--red);
+    box-shadow: 0 8px 0 var(--red), 0 16px 0 var(--red)
+  }
+
+  .wind {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 4px
+  }
+
+  .wind span {
+    width: 8px;
+    height: 90px;
+    border-radius: 8px;
+    background: linear-gradient(#bfe6ff, transparent)
+  }
+
+  .sofa {
+    position: absolute;
+    left: 4%;
+    bottom: 50px;
+    width: 62%
+  }
+
+  .sofa .back {
+    height: 110px;
+    background: #f3ece4;
+    border-radius: 18px 18px 6px 6px;
+    margin: 0 12px
+  }
+
+  .sofa .seat {
+    height: 60px;
+    background: #eadfd3;
+    border-radius: 14px;
+    margin-top: -12px;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, .1)
+  }
+
+  .pillow {
+    position: absolute;
+    border-radius: 10px;
+    bottom: 70px
+  }
+
+  .pillow.r {
+    left: 4%;
+    width: 90px;
+    height: 90px;
+    background: var(--red);
+    transform: rotate(-4deg)
+  }
+
+  .pillow.y {
+    right: 6%;
+    width: 70px;
+    height: 86px;
+    background: #f7a21b;
+    transform: rotate(5deg)
+  }
+
+  .table {
+    position: absolute;
+    left: 30%;
+    bottom: 0;
+    width: 36%;
+    height: 34px;
+    background: #e09a5f;
+    border-radius: 50%;
+    box-shadow: 0 8px 0 #c07a40
+  }
+
+  .plant {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 190px;
+    background: #fff;
+    border-radius: 50% 50% 12px 12px/30% 30% 12px 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .1)
+  }
+
+  .plant::before {
+    content: "";
+    position: absolute;
+    bottom: 80px;
+    left: 10px;
+    width: 46px;
+    height: 130px;
+    background: #2f5d2a;
+    border-radius: 70% 0 70% 0;
+    transform: rotate(-12deg)
+  }
+
+  .quality {
+    position: absolute;
+    right: 4%;
+    top: 140px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+    width: 210px;
+    z-index: 2
+  }
+
+  .quality h3 {
+    color: var(--red);
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 10px
+  }
+
+  .quality li {
+    list-style: none;
+    font-size: 11.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0
+  }
+
+  .quality li::before {
+    content: "✓";
+    flex: none;
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    border-radius: 50%;
+    font-size: 9px;
+    display: grid;
+    place-items: center
+  }
+
+  @media (max-width:900px) {
+    .hero {
+      grid-template-columns: 1fr
+    }
+
+    .visual {
+      min-height: 420px
+    }
+  }
+
+  @media (max-width:520px) {
+    .features {
+      grid-template-columns: repeat(2, 1fr)
+    }
+
+    .quality {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin: 200px auto 0
+    }
+
+    .visual {
+      min-height: auto
+    }
+
+    .sofa,
+    .pillow,
+    .table,
+    .plant {
+      display: none
+    }
+  }
+
+  @media (prefers-reduced-motion:reduce) {
+    .cta {
+      transition: none
+    }
+  }
+</style>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+    <h3 class="w3-bar-item">Menu</h3>
+    <a href="Beranda.html" class="w3-bar-item w3-button">Beranda</a>
+    <a href="Product.html" class="w3-bar-item w3-button">Product</a>
+    <a href="Profile.html" class="w3-bar-item w3-button">Profile</a>
+  </div>
+
+  <!-- Page Content -->
+  <div style="margin-left:25%">
+    <section class="hero">
+      <div>
+        <span class="badge">• Toko AC Metro Lampung</span>
+        <h1>AC Murah Berkualitas,<br><span>Selalu Dingin Maksimal</span>,<br>Dan Harga Tetap Bersahabat.</h1>
+        <p class="desc">Toko AC Metro Lampung menyediakan berbagai pilihan AC dari berbagai merek dengan harga bersaing
+          dan garansi resmi. Siap melayani kebutuhan AC untuk rumah, kantor, toko, sekolah, cafe, dan berbagai kebutuhan
+          lainnya.</p>
+
+        <div class="features">
+          <div class="feature">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z" />
+              <path d="M8.5 12l2.5 2.5 4.5-5" />
+            </svg>
+            <div>Garansi Resmi<br>Semua Product</div>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 12V4h8l10 10-8 8z" />
+              <circle cx="7.5" cy="8.5" r="1.3" />
+            </svg>
+            <div>Harga Kompetitif<br>Bersahabat</div>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 21c0-4.4 3.6-7 8-7s8 2.600 8 7" />
+              <path d="M8 5a4 4 0 018 0" />
+            </svg>
+            <div>Teknisi Expert<br>dan Terlatih</div>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 6h12v10H2zM14 9h4l4 4v3h-8z" />
+              <circle cx="7" cy="18" r="2" />
+              <circle cx="18" cy="18" r="2" />
+            </svg>
+            <div>Pengiriman Cepat<br>Seluruh Metro</div>
+          </div>
+        </div>
+
+        <!-- Ganti 628xxxxxxxxxx dengan nomor WhatsApp toko -->
+        <a class="cta"
+          href="https://wa.me/628xxxxxxxxxx?text=Halo%20Toko%20AC%20Metro%20Lampung%2C%20saya%20ingin%20konsultasi%20AC"
+          target="_blank" rel="noopener">
+          <span class="cta-main">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" fill="none" />
+              <path
+                d="M8.500 7.500c-.5 1-.5 2.500.800 4.300s3 2.800 4.400 3c.9.100 1.800-.5 2-1.300l-1.700-.9-1 .8c-1-.4-2.200-1.600-2.700-2.600l.8-.9-.8-1.900z"
+                fill="#fff" stroke="none" />
+            </svg>
+            <span>
+              <strong>Konsultasi &amp; Order via Whatsapp</strong>
+              <small>Respon cepat, Konsultasi gratis, Penawaran terbaik</small>
+            </span>
+          </span>
+          <span class="cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg></span>
+        </a>
+      </div>
+
+      <div class="visual" role="img" aria-label="Ilustrasi AC di ruang tamu">
+        <!-- Ganti blok ilustrasi ini dengan <img src="foto-ac.png"> jika punya gambar asli -->
+        <div class="ac">
+          <div class="ac-body"><i></i></div>
+          <div class="wind"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="quality">
+          <h3>AC Berkualitas<br>100% Original</h3>
+          <ul>
+            <li>Performa Optimal</li>
+            <li>Hemat Listrik</li>
+            <li>Tahan Lama</li>
+            <li>Kualitas Terjamin</li>
+            <li>Nyaman Digunakan</li>
+            <li>Garansi Resmi</li>
+          </ul>
+        </div>
+        <div class="sofa">
+          <div class="back"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="pillow r"></div>
+        <div class="pillow y"></div>
+        <div class="table"></div>
+        <div class="plant"></div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+
+</html>
