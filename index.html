@@ -1335,7 +1335,7 @@
         <span class="heart" role="button" aria-label="Favorit">♡</span>
         <div class="acts"><button class="add gold-grad">＋ Keranjang</button><button class="buy">Beli</button></div>
       </article>
-      <article class="prod" data-name="Samsung Galaxy S25 256GB" data-price="18999000" data-promo="50">
+      <article class="prod" data-name="Samsung Galaxy S25 256GB" data-price="18999000" data-promo="30">
         <div class="pi"><img src="src/assets/samsung s 25.jpg" alt="Samsung Galaxy S25 256GB"></div>
         <div class="info">
           <h3>Samsung Galaxy S25 256GB</h3>
@@ -1344,7 +1344,7 @@
         <span class="heart" role="button" aria-label="Favorit">♡</span>
         <div class="acts"><button class="add gold-grad">＋ Keranjang</button><button class="buy">Beli</button></div>
       </article>
-      <article class="prod" data-name="Xiaomi 15 Ultra 512GB" data-price="16999000" data-promo="50">
+      <article class="prod" data-name="Xiaomi 15 Ultra 512GB" data-price="16999000" data-promo="10">
         <div class="pi"><img src="src/assets/Xiaomi 15 Ultra.webp" alt="Xiaomi 15 Ultra 512GB"></div>
         <div class="info">
           <h3>Xiaomi 15 Ultra 512GB</h3>
@@ -1380,7 +1380,7 @@
         <span class="heart" role="button" aria-label="Favorit">♡</span>
         <div class="acts"><button class="add gold-grad">＋ Keranjang</button><button class="buy">Beli</button></div>
       </article>
-      <article class="prod" data-name="Realme GT 7 Pro 256GB" data-price="14999000" data-promo="50">
+      <article class="prod" data-name="Realme GT 7 Pro 256GB" data-price="14999000" data-promo="15">
         <div class="pi"><img src="src/assets/Realme GT 7 Pro.png" alt="Realme GT 7 Pro 256GB"></div>
         <div class="info">
           <h3>Realme GT 7 Pro 256GB</h3>
@@ -1389,7 +1389,7 @@
         <span class="heart" role="button" aria-label="Favorit">♡</span>
         <div class="acts"><button class="add gold-grad">＋ Keranjang</button><button class="buy">Beli</button></div>
       </article>
-      <article class="prod" data-name="POCO F7 Ultra 512GB" data-price="13999000" data-promo="50">
+      <article class="prod" data-name="POCO F7 Ultra 512GB" data-price="13999000" data-promo="25">
         <div class="pi"><img src="src/assets/POCO F7 Ultra.png" alt="POCO F7 Ultra 512GB"></div>
         <div class="info">
           <h3>POCO F7 Ultra 512GB</h3>
@@ -1664,7 +1664,7 @@
     };
     renderCart();
     renderPrices();
-    $("usePromo").addEventListener("click", () => { if (!promo) setPromo(true, "✓ Promo 50% aktif untuk produk berlabel PROMO") });
+    $("usePromo").addEventListener("click", () => { if (!promo) setPromo(true, "✓ Promo 30% aktif untuk produk berlabel PROMO") });
     function applyCode() {
       const v = $("pcode").value.trim().toUpperCase(), m = $("pmsg");
       if (v === CODE) { setPromo(true, "✓ Kode promo berhasil dipakai"); $("pcode").value = "" }
